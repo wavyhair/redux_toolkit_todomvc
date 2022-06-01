@@ -1,13 +1,25 @@
+/*
+ * @Author: chenjie
+ * @Date: 2022-05-29 13:59:23
+ * @LastEditors: chenjie
+ * @LastEditTime: 2022-05-29 14:25:04
+ * @FilePath: \redux_toolkit_todomvc\src\index.js
+ * @Description: 
+ * Copyright (c) 2022 by chenjie, All Rights Reserved.
+ */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { Provider } from 'react-redux';
+import store from './store'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
     <App />
+    </Provider>
   </React.StrictMode>
 );
 
